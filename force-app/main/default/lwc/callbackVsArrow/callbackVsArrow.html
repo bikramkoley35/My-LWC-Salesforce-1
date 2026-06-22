@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Callback Vs Arrow Demo">
+ 
+        <lightning-button
+        label="Refresh Using Arrow function" icon-name="utility:refresh"
+        slot="actions" onclick={updateDateTimeUsingArrow}></lightning-button>
+ 
+         <lightning-button
+        label="Refresh Using Bind" icon-name="utility:refresh"
+        slot="actions" onclick={updateDateTimeUsingBindApproach}></lightning-button>
+ 
+         <lightning-button
+        label="Refresh Using Local Variable" icon-name="utility:refresh"
+        slot="actions" onclick={updateDateTimeUsingLocalVariableApproach}></lightning-button>
+ 
+         <lightning-button
+        label="Refresh" icon-name="utility:refresh"
+        slot="actions" onclick={updateDateTimeUsingCallback}></lightning-button>
+    </lightning-card>
+    {todaysDateTime}
+</template>

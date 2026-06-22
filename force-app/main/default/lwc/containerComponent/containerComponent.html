@@ -1,0 +1,16 @@
+<template>
+    <!-- Component composistion -Container Component -->
+    <template lwc:if={hasProduct}>
+        <template iterator:it={productList}>
+            <div key={it.value.id}>
+                <c-child-component product-id={it.value.id} product-name={it.value.name}
+                    product-rating={it.value.rating}></c-child-component>
+            </div>
+
+        </template>
+
+    </template>
+    <template lwc:if={parentCalled}>
+        <p> Show the parent called the method to show this! it has not been called by the child or current component itself!!!!</p>
+    </template>
+</template>

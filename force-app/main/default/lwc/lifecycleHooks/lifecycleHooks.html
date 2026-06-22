@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Life Cycle Hooks">
+        <p class="slds-m-around_medium">{userName}</p>
+        <div class="slds-m-around_medium">
+            <!-- Rendered Callback : you can see here as the user clicks the button then rerendering happens and calls the rendered callback...  -->
+            <lightning-button variant="success" label="Change Name" title="Change Name" onclick={handleNameChange}></lightning-button>
+        </div>
+        
+    </lightning-card>
+    
+</template>

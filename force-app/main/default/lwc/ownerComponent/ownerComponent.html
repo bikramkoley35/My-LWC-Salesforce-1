@@ -1,0 +1,11 @@
+<template>
+    <!-- Component composistion -Owner Component -->
+    <lightning-card title="Component Composition">
+
+        <!-- We can pass variables using @api from child to parent as well as from parent to child -->
+        <c-container-component class="slds-m-around_medium" products-found=true
+            product-list={productList}></c-container-component>
+        <lightning-button variant="success" label="Call Child" title="Call Child" onclick={callChildMethod}
+            class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

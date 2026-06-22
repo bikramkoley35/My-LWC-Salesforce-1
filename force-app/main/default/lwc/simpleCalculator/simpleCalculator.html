@@ -1,0 +1,51 @@
+<template>
+    <div class="calculator-container">
+        <h1 class="title">Simple Calculator</h1>
+
+        <div class="input-section">
+            <lightning-input
+                label="First Number"
+                type="number"
+                onblur={handleFirstNumber}
+                value={firstnumber}>
+            </lightning-input>
+
+            <lightning-input
+                label="Second Number"
+                type="number"
+                onblur={handleSecondNumber}
+                value={secondnumber}>
+            </lightning-input>
+        </div>
+
+        <div class="result-box">
+            Result : {result}
+        </div>
+
+        <div class="button-section">
+            <lightning-button
+                label="Addition"
+                variant="brand"
+                onclick={add}>
+            </lightning-button>
+
+            <lightning-button
+                label="Subtraction"
+                variant="destructive"
+                onclick={sub}>
+            </lightning-button>
+
+            <lightning-button
+                label="Multiplication"
+                variant="success"
+                onclick={mult}>
+            </lightning-button>
+
+            <lightning-button
+                label="Division"
+                variant="neutral"
+                onclick={div}>
+            </lightning-button>
+        </div>
+    </div>
+</template>

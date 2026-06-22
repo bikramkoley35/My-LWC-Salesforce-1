@@ -1,0 +1,47 @@
+<template>
+
+    <!-- Method 1 -->
+    <lightning-card title="My Task List for Today">
+        <p class="slds-p-horizontal_small">
+            <!-- Itrator Working -->
+            <!-- for:each is for itrating means where to iterate means in taskList Array-->
+            <!-- for:item it the iterator variable like int i we take for other languages like c,c++,java -->
+            <template for:each={tasklist} for:item="eachTask">
+                <!-- key should be written when we are using other lightning component using in the secondary template with iterator and key should be unique always. -->
+                <!-- key should be a number or string -->
+                <div key={eachTask.taskId}>
+                    {eachTask.taskName} - {eachTask.taskProgress}
+                </div>
+            </template>
+        </p>
+        <p slot="footer">All the best! Get it going!!</p>
+    </lightning-card>
+
+    <!-- Method 2 -->
+    <lightning-card title="My Task List via Iterator">
+        <p class="slds-p-horizontal_small">
+            <!-- Itrator Working -->
+            <!-- for the case of iterator task will be the variable which will be iterating in tasklist array. -->
+            <template iterator:task={tasklist}>
+                <!-- When we have to segregate things based on our priorities as well as we have to highlight or modify as a part we have to use iterator method other wise for each is fine. -->
+                <template lwc:if={task.first}>
+                    <p key={task.value.taskID}><b>Top Priority for the day!
+                            {task.value.taskName} - {task.value.taskProgress}</b></p>
+                </template>
+
+                <!-- key should be written when we are using other lightning component using in the secondary template with iterator and key should be unique always. -->
+                <!-- key should be a number or string -->
+                <!-- We have to use task.value always as here we are fetching values of the variable in the array. -->
+                <div key={task.value.taskId}>
+                    {task.value.taskName} - {task.value.taskProgress}
+                </div>
+
+                <template lwc:if={task.last}>
+                    <p key={task.value.taskID}><i>Least Priority for the day!
+                            {task.value.taskName} - {task.value.taskProgress}</i></p>
+                </template>
+            </template>
+        </p>
+        <p slot="footer">All the best! Get it going!!</p>
+    </lightning-card>
+</template>

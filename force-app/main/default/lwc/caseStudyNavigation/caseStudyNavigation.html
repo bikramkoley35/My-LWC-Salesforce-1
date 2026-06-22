@@ -1,0 +1,39 @@
+<template>
+    <lightning-card>
+        <lightning-vertical-navigation onselect={handleSelect}>
+
+            <lightning-vertical-navigation-section label="Browse">
+
+                <lightning-vertical-navigation-item-icon
+                    label="Account Search"
+                    name="search"
+                    icon-name="standard:account">
+                </lightning-vertical-navigation-item-icon>
+
+                <lightning-vertical-navigation-item-icon
+                    label="Calculator"
+                    name="calc"
+                    icon-name="standard:apps">
+                </lightning-vertical-navigation-item-icon>
+
+            </lightning-vertical-navigation-section>
+
+            <lightning-vertical-navigation-section label="Deals">
+
+                <lightning-vertical-navigation-item-icon
+                    label="All"
+                    name="all"
+                    icon-name="standard:opportunity">
+                </lightning-vertical-navigation-item-icon>
+
+                <lightning-vertical-navigation-item-icon
+                    label="Graph"
+                    name="graph"
+                    icon-name="utility:chart">
+                </lightning-vertical-navigation-item-icon>
+
+            </lightning-vertical-navigation-section>
+
+        </lightning-vertical-navigation>
+    </lightning-card>
+</template>

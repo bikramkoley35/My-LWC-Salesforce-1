@@ -1,0 +1,63 @@
+<template>
+
+    <lightning-layout>
+
+        <lightning-layout-item size="2">
+
+            <c-case-study-navigation
+                onnavigation={handleNavigation}>
+            </c-case-study-navigation>
+
+        </lightning-layout-item>
+
+        <!-- Account Search -->
+
+        <template lwc:if={isSearch}>
+
+            <lightning-layout-item size="5">
+                <c-account-search-result>
+                </c-account-search-result>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="5">
+                <c-account-detail>
+                </c-account-detail>
+            </lightning-layout-item>
+
+        </template>
+
+        <!-- Calculator -->
+
+        <template lwc:if={isCalc}>
+
+            <lightning-layout-item size="10">
+                <c-calculator></c-calculator>
+            </lightning-layout-item>
+
+        </template>
+
+        <!-- Opportunities -->
+
+        <template lwc:if={isAll}>
+
+            <lightning-layout-item size="10">
+                <c-opportunity-comp-v4>
+                </c-opportunity-comp-v4>
+            </lightning-layout-item>
+
+        </template>
+
+        <!-- Graph -->
+
+        <template lwc:if={isGraph}>
+
+            <lightning-layout-item size="10">
+                <c-deal-demo-graph>
+                </c-deal-demo-graph>
+            </lightning-layout-item>
+
+        </template>
+
+    </lightning-layout>
+
+</template>

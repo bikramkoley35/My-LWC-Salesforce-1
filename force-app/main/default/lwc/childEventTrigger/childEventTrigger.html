@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Child component">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="success" label="Publish Data to Parent" title="Publish Data to Parent"
+                onclick={handleFiringEvent}></lightning-button>
+            <br>
+            The Selected Product is : {selectedProduct.id} and {selectedProduct.name}
+        </div>
+    </lightning-card>
+</template>

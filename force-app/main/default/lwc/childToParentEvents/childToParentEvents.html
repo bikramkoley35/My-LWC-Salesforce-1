@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent component">
+        Recieved this Value from the Child : <br>
+        Id: {selectedProduct.id} and Device: {selectedProduct.name} <br>
+        <!-- Id: {showFinalValue.id} and Device: {showFinalValue.name} <br> -->
+        Time: {timestamp} and Selected By : {selectedBy} <br>
+        current Product : {activeProd} <br>
+        <!-- Teacher gives the extra sheet to student but now student have to take it with the hand that comes here.... -->
+        <!-- We have to write "onYOURCUSTOMEVENTNAME" to trigger the custom event -->
+        <c-child-event-trigger onsendproductselected={handleProductSelection}></c-child-event-trigger>
+    </lightning-card>
+</template>

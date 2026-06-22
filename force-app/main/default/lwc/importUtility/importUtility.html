@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Import Utility from static resource">
+        <!-- importing from static resource -->
+        <img src={src} alt="Gojo">
+    </lightning-card>
+
+    <br>
+
+    <lightning-card title="Import Utility from custom labels">
+        <!-- importing from custom labels -->
+        <template lwc:if={showInProduction}>
+            Welcome to your Production System.
+        </template>
+
+        <template lwc:else>
+            Welcome to your Sandbox System.
+        </template>
+    </lightning-card>
+    <br>
+
+    <lightning-card title="Import Utility to get User Info">
+        <!-- importing current logged in User's info -->
+        <p>
+            Current Logged in user's id: {id} <br> 
+            Do you have the permissions? {hasPermission} <br>
+            Device Info : {deviceInfo} <br>
+            Locale : {localeInfo} <br>
+            Lang : {langInfo} <br>
+            Dir : {dirInfo} <br>
+            Currency : {currencyInfo} <br>
+        </p>
+    </lightning-card>
+
+
+</template>
