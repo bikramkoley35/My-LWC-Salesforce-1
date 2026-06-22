@@ -5,6 +5,8 @@
         record-id={recordId}
         object-api-name={objectApiName}
         >
+        <!-- To see Error messages -->
+         <lightning-messages></lightning-messages>
         <!-- Now You can make a Custom Layout of your own -->
          <div class="slds-grid slds-wrap">
             <div class="slds-col slds-size_1-of-2">
@@ -14,10 +16,16 @@
                 <lightning-input-field field-name="Status"></lightning-input-field>
             </div>
             <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Type"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
                 <lightning-input-field field-name="Priority"></lightning-input-field>
             </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="SLAViolation__c" required></lightning-input-field>
+            </div>
          </div>
-         <lightning-button type = "Submit" label ="Save"></lightning-button>
+         <lightning-button type = "submit" label ="Save" variant="brand"></lightning-button>
         </lightning-record-edit-form>
     </lightning-card>
 </template>
