@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Edit Record using Custom Layout">
+        <!-- I have to take edit form here if we take view form then only w4e can view not edit -->
+        <lightning-record-edit-form
+        record-id={recordId}
+        object-api-name={objectApiName}
+        >
+        <!-- Now You can make a Custom Layout of your own -->
+         <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="CaseNumber"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Status"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Priority"></lightning-input-field>
+            </div>
+         </div>
+         <lightning-button type = "Submit" label ="Save"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
