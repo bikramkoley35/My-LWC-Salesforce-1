@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Edit Record using Custom Layout">
+        <!-- I have to take edit form here if we take view form then only w4e can view not edit -->
+        <lightning-record-edit-form
+        object-api-name='Case'
+        onsubmit={handleSubmit}
+        onsuccess={handleSuccess}
+        >
+        <!-- To see Error messages -->
+         <lightning-messages></lightning-messages>
+        <!-- Now You can make a Custom Layout of your own -->
+         <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Subject"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Status"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Type"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Priority"></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="SLAViolation__c" required></lightning-input-field>
+            </div>
+         </div>
+         <lightning-button type = "submit" label ="Save" variant="success"></lightning-button>
+         <lightning-button type = "reset" label ="Reset" variant="brand"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
