@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Sports Program Manager">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-combobox
+                label="Select Sports Program"
+                value={selectedProgramId}
+                options={programOptions}
+                onchange={handleChange}>
+            </lightning-combobox>
+
+            <template if:true={selectedProgramId}>
+                <br/>
+
+                <lightning-button
+                    label="Delete Program"
+                    variant="destructive"
+                    onclick={handleDelete}>
+                </lightning-button>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,8 @@
+<template>
+    <!-- get all the cases from the database that i have queried into LWC and display them in some sort of table -->
+     <lightning-card title="Oldest 10 Cases using Wire and Apex together">
+        <template for:each={caseList} for:item="caseRecord">
+            {caseRecord.Subject} - {caseRecord.Reason} - {caseRecord.Priority}
+        </template>
+     </lightning-card>
+</template>
